@@ -1,10 +1,13 @@
 import React from 'react';
+import Body from '../layout/Body'
 
 const Home = () => {
 
     return (
         <>
-            <div>This is the Home</div>
+            <Body>
+            <p>This is the Home Screen!</p>
+            </Body>
         </>
     );
 }
