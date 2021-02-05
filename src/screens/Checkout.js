@@ -1,10 +1,13 @@
 import React from 'react';
+import Body from '../layout/Body'
 
 const Checkout = () => {
 
     return (
         <>
-            <div>This is the Checkout</div>
+            <Body>
+                <p>This is the Checkout Screen!</p>
+            </Body>
         </>
     );
 }

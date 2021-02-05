@@ -1,12 +1,15 @@
 import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
 
-const Body = () => {
-
-    return (
-        <>
-            <div>This is the Body</div>
-        </>
-    );
-}
+const Body = ({ children }) => {
+  return (
+    <>
+      <Header />
+      {children}
+      <Footer />
+    </>
+  );
+};
 
 export default Body;
