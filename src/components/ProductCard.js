@@ -15,10 +15,10 @@ const ProductCard = ({ id, name, price, handleProductAdd }) => {
     setQuantity(e.target.value);
   };
 
-  // const handleClick = (e) => {
-  //   e.preventDefault();
-  //   handleProductAdd(id, name, quantity, price);
-  // };
+  const handleClick = (e) => {
+    e.preventDefault();
+    handleProductAdd(id, name, quantity, price);
+  };
 
   return (
     <div id={id}>
@@ -33,7 +33,7 @@ const ProductCard = ({ id, name, price, handleProductAdd }) => {
           onChange={(e) => handleChange(e)}
         ></input>
         <button 
-        // onClick={(e) => handleClick(e)}
+         onClick={(e) => handleClick(e)}
         >
           <FontAwesomeIcon icon={faShoppingBasket} />
         </button>

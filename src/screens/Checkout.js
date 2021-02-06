@@ -1,7 +1,7 @@
 import React from 'react';
 import Body from '../layout/Body'
 
-const Checkout = () => {
+const Checkout = ({cart}) => {
 
     return (
         <>
