@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import ProductCard from './ProductCard';
 const axios = require('axios');
 
-const ProductDeck = () => {
+const ProductDeck = ({handleProductAdd}) => {
 
   const [productRender, setProductRender] = useState([]);
  
@@ -20,6 +20,7 @@ const ProductDeck = () => {
                     key={product.id}
                     name={product.name}
                     price={product.price}
+                    handleProductAdd={handleProductAdd}
                 />
                 );
             })

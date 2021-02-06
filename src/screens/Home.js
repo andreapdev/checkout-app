@@ -2,12 +2,12 @@ import React from 'react';
 import Body from '../layout/Body';
 import ProductDeck from '../components/ProductDeck';
 
-const Home = () => {
+const Home = ({handleProductAdd}) => {
 
     return (
         <>
             <Body>
-                <ProductDeck />
+                <ProductDeck handleProductAdd={handleProductAdd}/>
             </Body>
         </>
     );
