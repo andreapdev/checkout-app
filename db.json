@@ -1,0 +1,8 @@
+{
+  "products": [
+    { "id": 1, "name": "Green Tea", "price": "3.20" },
+    { "id": 1, "name": "Strawberries", "price": "5.00" },
+    { "id": 1, "name": "Coffee", "price": "11.60" }
+  ]
+
+}

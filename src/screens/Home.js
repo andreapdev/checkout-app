@@ -1,6 +1,6 @@
 import React from 'react';
 import Body from '../layout/Body';
-import ProductCard from '../components/ProductCard';
+import ProductDeck from '../components/ProductDeck';
 
 const Home = () => {
 
@@ -8,7 +8,7 @@ const Home = () => {
         <>
             <Body>
             <p>This is the Home Screen!</p>
-            <ProductCard />
+            <ProductDeck />
             </Body>
         </>
     );
