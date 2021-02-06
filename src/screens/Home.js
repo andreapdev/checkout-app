@@ -7,8 +7,7 @@ const Home = () => {
     return (
         <>
             <Body>
-            <p>This is the Home Screen!</p>
-            <ProductDeck />
+                <ProductDeck />
             </Body>
         </>
     );
