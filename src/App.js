@@ -19,10 +19,10 @@ const App = () => {
     if(posRepeated>-1){
       const newQuantity=quantity+cart[posRepeated].quantity;
       const helperObject={id: id, name: name, quantity: newQuantity, price: price};
-          setCart(cart.splice(posRepeated, 1, helperObject));
+          cart.splice(posRepeated, 1, helperObject);
     }else{
       const addedObject={ id: id, name: name, quantity: quantity, price: price };
-      setCart(cart.push(addedObject));
+      cart.push(addedObject);
     }
   };
 
