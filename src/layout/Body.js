@@ -4,11 +4,11 @@ import Footer from './Footer';
 
 const Body = ({ children }) => {
   return (
-    <>
+    <div>
       <Header />
       {children}
       <Footer />
-    </>
+    </div>
   );
 };
 

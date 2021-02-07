@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 const containerStyle = {
     display: 'flex',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
+    minHeight: '10vh'
   };
   
   const Header = () => {

@@ -5,27 +5,53 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './screens/Home';
 import Checkout from './screens/Checkout';
 
+//
+const axios=require('axios');
+
 const App = () => {
   const [cart, setCart] = useState([]);
   const [totalAmount, setTotalAmount] = useState(0);
 
   useEffect (()=>{console.log('effect',cart)}, [cart]);
 
-  const handleProductAdd = (id, name, quantity, price) => {
+  const handleProductAdd = async(id, name, quantity, price) => {
     console.log('entered handleProductAdd', cart);
-    let posRepeated = cart.map((item) =>{ return item.id; }).indexOf(id);
-    console.log('repeated', posRepeated)
+    const posRepeated = cart.findIndex(i => i.id === id);
+    console.log('repeated', posRepeated);
 
     if(posRepeated>-1){
       const newQuantity=quantity+cart[posRepeated].quantity;
-      const helperObject={id: id, name: name, quantity: newQuantity, price: price};
-          setCart(cart.splice(posRepeated, 1, helperObject));
+      const newPrice=await checkOffers(id, newQuantity, price);
+      const helperObject={id: id, name: name, quantity: newQuantity, price: price, newPrice: newPrice};
+      cart.splice(posRepeated, 1, helperObject);
     }else{
-      const addedObject={ id: id, name: name, quantity: quantity, price: price };
-      setCart(cart.push(addedObject));
+      const newPrice=await checkOffers(id, quantity, price);
+      const addedObject={ id: id, name: name, quantity: quantity, price: price, newPrice: newPrice };
+      cart.push(addedObject);
     }
+
+    
   };
 
+  const checkOffers = async(id, quantity, price) =>{
+    console.log('checking offers')
+    try{
+      const offers=await axios.get(`http://localhost:3001/offers?id=${id}`)
+      const offerData=offers.data[0];
+      //eval is unsafe if the data source is not trusted (it is in this case)
+      //alternatively use JSON.parse (not working here-maybe because json-server)
+      //another alternative: try fetch instead of axios
+      if (eval(offerData.condition)){
+        const newPrice=eval(offerData.newPrice);
+        console.log(eval(offerData.condition),'discounted', newPrice);
+        return newPrice;
+      }else{
+        return price;
+      }
+    }catch(error){
+      console.error(error);
+    }
+  }
 
   return (
     <div className='App'>

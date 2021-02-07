@@ -1,7 +1,15 @@
 {
   "products": [
-    { "id": "GR1", "name": "Green tea", "price": "£3.11" },
-    { "id": "SR1", "name": "Strawberries", "price": "£5.00" },
-    { "id": "CF1", "name": "Coffee", "price": "£11.23" }
+    { "id": "GR1", "name": "Green tea", "price": "3.11" },
+    { "id": "SR1", "name": "Strawberries", "price": "5.00" },
+    { "id": "CF1", "name": "Coffee", "price": "11.23" }
+  ],
+  "offers": [
+    {"id": "GR1", "condition": "quantity%2===0", "newPrice": "price*0.5"},
+    {"id": "SR1", "condition": "quantity>=3", "newPrice": "4.50"},
+    {"id": "CF1", "condition": "quantity>=3", "newPrice": "price*0.75"}
+  ],
+  "checkoutData":[
+    
   ]
 }

@@ -24,7 +24,7 @@ const ProductCard = ({ id, name, price, handleProductAdd }) => {
     <div id={id}>
       <img src={imgSrc} alt="product" style={imgStyle} />
       <p>{name}</p>
-      <p>{price}</p>
+      <p>{`£${price}`}</p>
       <div>
         <input
           type="number"
