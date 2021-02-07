@@ -15,9 +15,7 @@ const App = () => {
   useEffect (()=>{console.log('effect',cart)}, [cart]);
 
   const handleProductAdd = async(id, name, quantity, price) => {
-    console.log('entered handleProductAdd', cart);
     const posRepeated = cart.findIndex(i => i.id === id);
-    console.log('repeated', posRepeated);
 
     if(posRepeated>-1){
       const newQuantity=quantity+cart[posRepeated].quantity;
@@ -30,7 +28,9 @@ const App = () => {
       cart.push(addedObject);
     }
 
-    
+    let sum=0;
+    cart.forEach(item =>{sum=sum+parseFloat(item.price)} );
+    setTotalAmount(sum);
   };
 
   const checkOffers = async(id, quantity, price) =>{
@@ -53,6 +53,14 @@ const App = () => {
     }
   }
 
+  const handleOrder = async() => {
+    await axios.post('http://localhost:3001/checkoutData', {
+      cart: cart,
+      total: totalAmount
+    })
+    console.log('order ok')
+  }
+
   return (
     <div className='App'>
       <Router>
@@ -61,7 +69,7 @@ const App = () => {
             <Home handleProductAdd={handleProductAdd} />
           </Route>
           <Route exact path='/checkout'>
-            <Checkout cart={cart}/>
+            <Checkout cart={cart} totalAmount={totalAmount} handleOrder={handleOrder}/>
           </Route>
         </Switch>
       </Router>

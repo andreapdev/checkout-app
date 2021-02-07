@@ -14,7 +14,12 @@ const titleItemStyle = {
     minWidth: '10rem'
 }
 
-const Checkout = ({cart}) => {
+const Checkout = ({cart, totalAmount, handleOrder}) => {
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        handleOrder();
+    }
 
     const CheckoutLine = ({name, quantity, price, newPrice}) => {
         return (
@@ -46,6 +51,8 @@ const Checkout = ({cart}) => {
                         <div style={titleItemStyle}>Final price</div>
                     </div>
                     <div><CheckoutList /></div>
+                    <div style={{textAlign: "right", margin: "2rem 5rem 0 0"}}>Total: £{totalAmount}</div>
+                    <button onClick={(e)=>handleClick(e)}>Confirm</button>
                 </div>
             </Body>
         </>
