@@ -15,3 +15,9 @@ code {
 .App{
   text-align: center;
 }
+
+button{
+  background-color: steelblue;
+  color: white;
+  border:none;
+}

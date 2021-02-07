@@ -1,15 +1,51 @@
 {
   "products": [
-    { "id": "GR1", "name": "Green tea", "price": "3.11" },
-    { "id": "SR1", "name": "Strawberries", "price": "5.00" },
-    { "id": "CF1", "name": "Coffee", "price": "11.23" }
+    {
+      "id": "GR1",
+      "name": "Green tea",
+      "price": "3.11"
+    },
+    {
+      "id": "SR1",
+      "name": "Strawberries",
+      "price": "5.00"
+    },
+    {
+      "id": "CF1",
+      "name": "Coffee",
+      "price": "11.23"
+    }
   ],
   "offers": [
-    {"id": "GR1", "condition": "quantity>1", "newPrice": "(price*quantity*0.5)+(price*0.5*(quantity%2))"},
-    {"id": "SR1", "condition": "quantity>=3", "newPrice": "4.50*quantity"},
-    {"id": "CF1", "condition": "quantity>=3", "newPrice": "price*quantity*0.75"}
+    {
+      "id": "GR1",
+      "condition": "quantity>1",
+      "newPrice": "(price*quantity*0.5)+(price*0.5*(quantity%2))"
+    },
+    {
+      "id": "SR1",
+      "condition": "quantity>=3",
+      "newPrice": "4.50*quantity"
+    },
+    {
+      "id": "CF1",
+      "condition": "quantity>=3",
+      "newPrice": "price*quantity*0.75"
+    }
   ],
-  "checkoutData":[
-    
+  "checkoutData": [
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 1,
+          "price": "3.11",
+          "newPrice": "3.11"
+        }
+      ],
+      "total": 3.11,
+      "id": 1
+    }
   ]
 }
