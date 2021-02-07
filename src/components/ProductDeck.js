@@ -7,12 +7,11 @@ const ProductDeck = ({handleProductAdd}) => {
   const [productRender, setProductRender] = useState([]);
  
   const productLoop = async() => {
-    let helperArray = [];
     try {
         const products = await axios.get("http://localhost:3001/products");
         const productData=products.data;
         console.log(productData);
-        helperArray.push(
+        const helperArray=(
             productData.map((product) => {
                 return (
                 <ProductCard

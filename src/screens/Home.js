@@ -7,7 +7,9 @@ const Home = ({handleProductAdd}) => {
     return (
         <>
             <Body>
-                <ProductDeck handleProductAdd={handleProductAdd}/>
+                <div style={{minHeight: "80vh"}}>
+                    <ProductDeck handleProductAdd={handleProductAdd}/>
+                </div>
             </Body>
         </>
     );
