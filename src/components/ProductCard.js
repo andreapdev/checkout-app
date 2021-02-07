@@ -8,6 +8,10 @@ const imgSrc =
 const imgStyle = {
   maxHeight: "200px"
 };
+
+const cardStyle = {
+  margin: "1rem"
+}
 const ProductCard = ({ id, name, price, handleProductAdd }) => {
   const [quantity, setQuantity] = useState(1);
 
@@ -21,7 +25,7 @@ const ProductCard = ({ id, name, price, handleProductAdd }) => {
   };
 
   return (
-    <div id={id}>
+    <div id={id} style={cardStyle}>
       <img src={imgSrc} alt="product" style={imgStyle} />
       <p>{name}</p>
       <p>{`£${price}`}</p>

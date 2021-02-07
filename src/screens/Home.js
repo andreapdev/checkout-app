@@ -6,10 +6,8 @@ const Home = ({handleProductAdd}) => {
 
     return (
         <>
-            <Body>
-                <div style={{minHeight: "80vh"}}>
+            <Body title="Online shop">
                     <ProductDeck handleProductAdd={handleProductAdd}/>
-                </div>
             </Body>
         </>
     );
