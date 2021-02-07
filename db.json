@@ -5,9 +5,9 @@
     { "id": "CF1", "name": "Coffee", "price": "11.23" }
   ],
   "offers": [
-    {"id": "GR1", "condition": "quantity%2===0", "newPrice": "price*0.5"},
-    {"id": "SR1", "condition": "quantity>=3", "newPrice": "4.50"},
-    {"id": "CF1", "condition": "quantity>=3", "newPrice": "price*0.75"}
+    {"id": "GR1", "condition": "quantity>1", "newPrice": "(price*quantity*0.5)+(price*0.5*(quantity%2))"},
+    {"id": "SR1", "condition": "quantity>=3", "newPrice": "4.50*quantity"},
+    {"id": "CF1", "condition": "quantity>=3", "newPrice": "price*quantity*0.75"}
   ],
   "checkoutData":[
     
