@@ -21,8 +21,8 @@ const Checkout = ({cart}) => {
             <div style={{display: "flex", justifyContent:"space-around"}}>
                 <div style={lineItemStyle}>{name}</div>
                 <div style={lineItemStyle}>{quantity}</div>
-                <div style={lineItemStyle}>{`£${price}`}</div>
-                <div style={lineItemStyle}>{`£${Math.round(newPrice*100)/100}`}</div>
+                <div style={lineItemStyle}>{`£${(Math.round(price*100)/100)}`}</div>
+                <div style={lineItemStyle}>{`£${(Math.round(newPrice*100)/100)}`}</div>
             </div>
         );
     }
