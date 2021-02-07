@@ -24,6 +24,7 @@ const titleStyle = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  selfAlign: 'center'
 }
 
 const linkStyle = {

@@ -3,7 +3,6 @@ import Header from './Header';
 import Footer from './Footer';
 
 const bodyStyle={
-  minHeight: "80vh", 
   padding:"1rem",
   display: "flex",
   justifyContent: "center"

@@ -13,6 +13,10 @@ const titleItemStyle = {
     fontSize: '1.2rem',
     minWidth: '10rem'
 }
+const buttonStyle = {
+    fontSize: "1.5rem",
+    marginTop: "2rem"
+}
 
 const Checkout = ({cart, totalAmount, handleOrder}) => {
 
@@ -33,7 +37,6 @@ const Checkout = ({cart, totalAmount, handleOrder}) => {
     }
 
     const CheckoutList = () => {
-        console.log('checkout',cart);
         const checkoutDisplay=cart.map(item=>{
             return <CheckoutLine key={item.name} name={item.name} quantity={item.quantity} price={item.price} newPrice={item.newPrice}/>
         })
@@ -51,8 +54,14 @@ const Checkout = ({cart, totalAmount, handleOrder}) => {
                         <div style={titleItemStyle}>Final price</div>
                     </div>
                     <div><CheckoutList /></div>
-                    <div style={{textAlign: "right", margin: "2rem 5rem 0 0"}}>Total: £{totalAmount}</div>
-                    <button onClick={(e)=>handleClick(e)}>Confirm</button>
+                    {
+                    totalAmount>0?
+                    <><div style={{textAlign: "center", marginTop: "2rem"}}>Total: £{totalAmount}</div>
+                    <button onClick={(e)=>handleClick(e)} style={buttonStyle}>Confirm Order</button></>
+                    :
+                    <div style={{textAlign: "center", marginTop: "2rem"}}>Your cart is empty!</div>
+                    }
+
                 </div>
             </Body>
         </>

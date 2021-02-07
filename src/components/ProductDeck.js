@@ -10,7 +10,6 @@ const ProductDeck = ({handleProductAdd}) => {
     try {
         const products = await axios.get("http://localhost:3001/products");
         const productData=products.data;
-        console.log(productData);
         const helperArray=(
             productData.map((product) => {
                 return (
@@ -35,6 +34,7 @@ const ProductDeck = ({handleProductAdd}) => {
 
   const deckStyle = {
     display: "flex",
+    flexWrap: "wrap",
     justifyContent: "space-around"
   };
 
