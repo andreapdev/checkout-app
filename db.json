@@ -30,7 +30,7 @@
     {
       "id": "CF1",
       "condition": "quantity>=3",
-      "newPrice": "price*quantity*0.75"
+      "newPrice": "price*quantity*0.67"
     }
   ],
   "checkoutData": [
@@ -46,6 +46,303 @@
       ],
       "total": 3.11,
       "id": 1
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 29,
+          "price": "3.11",
+          "newPrice": 46.65
+        },
+        {
+          "id": "SR1",
+          "name": "Strawberries",
+          "quantity": 3,
+          "price": "5.00",
+          "newPrice": 13.5
+        }
+      ],
+      "total": 60.15,
+      "id": 2
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 29,
+          "price": "3.11",
+          "newPrice": 46.65
+        },
+        {
+          "id": "SR1",
+          "name": "Strawberries",
+          "quantity": 3,
+          "price": "5.00",
+          "newPrice": 13.5
+        }
+      ],
+      "total": 60.15,
+      "id": 3
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 29,
+          "price": "3.11",
+          "newPrice": 46.65
+        },
+        {
+          "id": "SR1",
+          "name": "Strawberries",
+          "quantity": 3,
+          "price": "5.00",
+          "newPrice": 13.5
+        }
+      ],
+      "total": 60.15,
+      "id": 4
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 29,
+          "price": "3.11",
+          "newPrice": 46.65
+        },
+        {
+          "id": "SR1",
+          "name": "Strawberries",
+          "quantity": 3,
+          "price": "5.00",
+          "newPrice": 13.5
+        }
+      ],
+      "total": 60.15,
+      "id": 5
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 29,
+          "price": "3.11",
+          "newPrice": 46.65
+        },
+        {
+          "id": "SR1",
+          "name": "Strawberries",
+          "quantity": 3,
+          "price": "5.00",
+          "newPrice": 13.5
+        }
+      ],
+      "total": 60.15,
+      "id": 6
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 29,
+          "price": "3.11",
+          "newPrice": 46.65
+        },
+        {
+          "id": "SR1",
+          "name": "Strawberries",
+          "quantity": 3,
+          "price": "5.00",
+          "newPrice": 13.5
+        }
+      ],
+      "total": 60.15,
+      "id": 7
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 29,
+          "price": "3.11",
+          "newPrice": 46.65
+        },
+        {
+          "id": "SR1",
+          "name": "Strawberries",
+          "quantity": 3,
+          "price": "5.00",
+          "newPrice": 13.5
+        }
+      ],
+      "total": 60.15,
+      "id": 8
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 29,
+          "price": "3.11",
+          "newPrice": 46.65
+        },
+        {
+          "id": "SR1",
+          "name": "Strawberries",
+          "quantity": 3,
+          "price": "5.00",
+          "newPrice": 13.5
+        }
+      ],
+      "total": 60.15,
+      "id": 9
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 29,
+          "price": "3.11",
+          "newPrice": 46.65
+        },
+        {
+          "id": "SR1",
+          "name": "Strawberries",
+          "quantity": 3,
+          "price": "5.00",
+          "newPrice": 13.5
+        }
+      ],
+      "total": 60.15,
+      "id": 10
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 4,
+          "price": "3.11",
+          "newPrice": 6.22
+        }
+      ],
+      "total": 6.22,
+      "id": 11
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 4,
+          "price": "3.11",
+          "newPrice": 6.22
+        }
+      ],
+      "total": 6.22,
+      "id": 12
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 8,
+          "price": "3.11",
+          "newPrice": 12.44
+        }
+      ],
+      "total": 12.44,
+      "id": 13
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 8,
+          "price": "3.11",
+          "newPrice": 12.44
+        }
+      ],
+      "total": 12.44,
+      "id": 14
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 8,
+          "price": "3.11",
+          "newPrice": 12.44
+        }
+      ],
+      "total": 12.44,
+      "id": 15
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 8,
+          "price": "3.11",
+          "newPrice": 12.44
+        }
+      ],
+      "total": 12.44,
+      "id": 16
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 8,
+          "price": "3.11",
+          "newPrice": 12.44
+        }
+      ],
+      "total": 12.44,
+      "id": 17
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 8,
+          "price": "3.11",
+          "newPrice": 12.44
+        }
+      ],
+      "total": 12.44,
+      "id": 18
+    },
+    {
+      "cart": [
+        {
+          "id": "GR1",
+          "name": "Green tea",
+          "quantity": 1,
+          "price": "3.11",
+          "newPrice": 3.11
+        }
+      ],
+      "total": 3.11,
+      "id": 19
     }
   ]
 }

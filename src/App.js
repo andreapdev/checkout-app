@@ -29,12 +29,12 @@ const App = () => {
     }
 
     let sum=0;
-    cart.forEach(item =>{sum=sum+parseFloat(item.price)} );
+    cart.forEach(item =>{sum=sum+parseFloat(item.newPrice)} );
     setTotalAmount(sum);
   };
 
   const checkOffers = async(id, quantity, price) =>{
-    console.log('checking offers')
+   
     try{
       const offers=await axios.get(`http://localhost:3001/offers?id=${id}`)
       const offerData=offers.data[0];
@@ -43,10 +43,9 @@ const App = () => {
       //another alternative: try fetch instead of axios
       if (eval(offerData.condition)){
         const newPrice=eval(offerData.newPrice);
-        console.log(eval(offerData.condition),'discounted', newPrice);
         return newPrice;
       }else{
-        return price;
+        return price*quantity;
       }
     }catch(error){
       console.error(error);
@@ -58,7 +57,6 @@ const App = () => {
       cart: cart,
       total: totalAmount
     })
-    console.log('order ok')
   }
 
   return (
@@ -66,7 +64,7 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path='/'>
-            <Home handleProductAdd={handleProductAdd} />
+            <Home handleProductAdd={handleProductAdd} totalAmount={totalAmount}/>
           </Route>
           <Route exact path='/checkout'>
             <Checkout cart={cart} totalAmount={totalAmount} handleOrder={handleOrder}/>
