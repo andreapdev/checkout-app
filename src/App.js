@@ -45,7 +45,7 @@ const App = () => {
         const newPrice=eval(offerData.newPrice);
         return newPrice;
       }else{
-        return price;
+        return price*quantity;
       }
     }catch(error){
       console.error(error);
@@ -64,7 +64,7 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path='/'>
-            <Home handleProductAdd={handleProductAdd} />
+            <Home handleProductAdd={handleProductAdd} totalAmount={totalAmount}/>
           </Route>
           <Route exact path='/checkout'>
             <Checkout cart={cart} totalAmount={totalAmount} handleOrder={handleOrder}/>

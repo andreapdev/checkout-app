@@ -8,10 +8,10 @@ const bodyStyle={
   justifyContent: "center"
 }
 
-const Body = ({ children, title }) => {
+const Body = ({ children, title, totalAmount }) => {
   return (
     <div>
-      <Header title={title}/>
+      <Header title={title} totalAmount={totalAmount}/>
       <div style={bodyStyle}>
         {children}
       </div> 
